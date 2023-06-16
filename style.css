@@ -9,6 +9,7 @@ header {
 
   h1 {
     font-size: 35px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
   body {
@@ -24,29 +25,34 @@ header {
   #search-input {
     margin-bottom: 10px;
     width: 400px;
-    height: 20px;
+    height: 30px;
     font-size: 14px;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
 
   }
   
   #search-button{
     margin-bottom: 10px;
     width: 120px;
-    height: 22px;
+    height: 32px;
     font-size: 14px;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+    background-color: #90EE90;
   }
 
-  #clear-button {
+  #close-search-btn {
     margin-bottom: 10px;
     width: 120px;
-    height: 22px;
+    height: 32px;
     font-size: 14px;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+    background-color: #E2062C;
   }
   
   
@@ -72,6 +78,8 @@ header {
     width: 100%;
     max-height: 300px;
     object-fit: cover;
+    border: none;
+    border-radius: 10px;
   }
   
   .movie-votes {
@@ -86,6 +94,7 @@ header {
     height: 30px;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
   }
   
   
