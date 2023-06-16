@@ -28,11 +28,8 @@ function displayCurrentMovies() {
   fetch(url)
     .then(response => response.json())
     .then(data => {
-      moviesGrid.innerHTML = '';
-      data.results.forEach(movie => {
-        const movieElement = createMovieElement(movie);
-        moviesGrid.appendChild(movieElement);
-      });
+      const newMovies = data.results.map(movie => createMovieElement(movie));
+      moviesGrid.append(...newMovies);
     })
     .catch(error => {
       console.error('Error:', error);
@@ -45,11 +42,6 @@ function createMovieElement(movie) {
   movieElement.classList.add('movie');
   movieElement.classList.add('movie-card');
 
-  const titleElement = document.createElement('h2');
-  titleElement.classList.add('movie-title');
-  titleElement.textContent = movie.title;
-  movieElement.appendChild(titleElement);
-
   const posterElement = document.createElement('img');
   posterElement.classList.add('movie-poster');
   posterElement.src = `https://image.tmdb.org/t/p/w500${movie.poster_path}`;
@@ -58,8 +50,13 @@ function createMovieElement(movie) {
 
   const votesElement = document.createElement('p');
   votesElement.classList.add('movie-votes');
-  votesElement.textContent = `Rating: ${movie.vote_average}`;
+  votesElement.textContent = `⭐ ${movie.vote_average}`;
   movieElement.appendChild(votesElement);
+
+  const titleElement = document.createElement('h2');
+  titleElement.classList.add('movie-title');
+  titleElement.textContent = movie.title;
+  movieElement.appendChild(titleElement);
 
   return movieElement;
 }
@@ -72,11 +69,9 @@ function searchMovies() {
   fetch(url)
     .then(response => response.json())
     .then(data => {
+      const newMovies = data.results.map(movie => createMovieElement(movie));
       moviesGrid.innerHTML = '';
-      data.results.forEach(movie => {
-        const movieElement = createMovieElement(movie);
-        moviesGrid.appendChild(movieElement);
-      });
+      moviesGrid.append(...newMovies);
     })
     .catch(error => {
       console.error('Error:', error);
