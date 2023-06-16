@@ -7,18 +7,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
+   
+    <header>
+        <div>
+            <h1>&#127871; Flixster</h1>
+        </div>
 
-    <div class="header">
-        <img src="header popcorn.jpg" alt="logo" />
-        <h1>Flixster</h1>
+         <form>
+            <input type="text" id="search-input" placeholder="Search movies">
+            <button id="search-button">Search</button>
+            <button id="clear-button">Clear Search</button>
+      </form>
+    </header>
+
+
+      <div>
+        <h2>Now Playing</h2>
+        <div id="movies-grid"></div>
+        <div id="movie-list"></div>
+        <button id="load-more">Load More</button>
       </div>
-
-    <form>
-        <label for="searchValue">Search:</label>
-        <input type="text" id="searchValue" name="searchValue" placeholder="Enter Movie Title" re>
-        <button id="submitBtn"  type="submit">Go</button>
-    </form>
     
     <script src="script.js"></script>
 </body>
+
+
+  
 </html>
