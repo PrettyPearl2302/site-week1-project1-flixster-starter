@@ -4,17 +4,24 @@ header {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    padding: 8px;
+    padding: 15px;
   }
 
   h1 {
-    font-size: 35px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 60px;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    color:#E2062C;
   }
 
   body {
-    background-color: #1E3F66;
+    background-color: #171717;
     color: white;
+  }
+
+  h2 {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 30px;
   }
   
   header div {
@@ -24,10 +31,11 @@ header {
   
   #search-input {
     margin-bottom: 10px;
-    width: 400px;
-    height: 30px;
-    font-size: 14px;
-    border: none;
+    width: 500px;
+    height: 40px;
+    font-size: 15px;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
 
@@ -36,23 +44,29 @@ header {
   #search-button{
     margin-bottom: 10px;
     width: 120px;
-    height: 32px;
-    font-size: 14px;
+    height: 42px;
+    font-size: 16px;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #90EE90;
+    color:#555555;
+    background-color: #BEBEBE;
   }
 
   #close-search-btn {
     margin-bottom: 10px;
     width: 120px;
-    height: 32px;
-    font-size: 14px;
+    height: 42px;
+    font-size: 16px;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #E2062C;
+    color:#555555;
+    background-color:#BEBEBE ;
   }
   
   
@@ -63,13 +77,14 @@ header {
   }
   
   .movie-card {
-    border: 1px solid #1e3f66;
+    border: 1px solid #171717;
     padding: 5px;
     text-align: center;
   }
   
   .movie-title {
-    font-size: 14px;
+    font-size: 16px;
+    font-family: 'Segoe UI', sans-serif;
     font-weight: bold;
     margin-bottom: 10px;
   }
@@ -84,6 +99,7 @@ header {
   
   .movie-votes {
     font-size: 14px;
+    font-family: 'Segoe UI', sans-serif;
     color: #888;
   }
 
@@ -91,7 +107,12 @@ header {
     display: block;
     margin: 0 auto;
     width: 200px;
-    height: 30px;
+    height: 50px;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color:#555555;
+    background-color:#BEBEBE ;
     border: none;
     border-radius: 5px;
     cursor: pointer;
