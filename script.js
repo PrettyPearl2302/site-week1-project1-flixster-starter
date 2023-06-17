@@ -12,11 +12,15 @@ const clearButton = document.getElementById('close-search-btn');
 const loadMoreBtn = document.getElementById('load-more');
 
 // Event listener for the search button
+// Event listener for the search button
 searchButton.addEventListener('click', function(e) {
   e.preventDefault();
-
+  if (searchInput.value.trim() !== '') {
     searchMovies();
-  });
+  } else {
+    alert('Please enter a search value.');
+  }
+});
 
 // Event listener for the clear button
 clearButton.addEventListener('click', clearSearch);
